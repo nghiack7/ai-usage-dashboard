@@ -4,6 +4,16 @@ Local-first web dashboard for tracking token and context usage across AI coding 
 
 The app runs a Go web service, stores parsed usage events in SQLite, and serves a lightweight dashboard. It only reads configured log/session files and writes to its own `data/usage.db`.
 
+![AI Usage Dashboard overview](docs/assets/dashboard-overview.png)
+
+## Demo
+
+![AI Usage Dashboard demo](docs/assets/dashboard-demo.gif)
+
+[View the MP4 demo](docs/assets/dashboard-demo.mp4)
+
+The README media uses synthetic demo data. It does not include local usage history or project paths.
+
 ## What It Tracks
 
 - Fresh input tokens reported by the tool/provider.
