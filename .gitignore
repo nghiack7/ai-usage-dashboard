@@ -1,0 +1,6 @@
+data/*.db
+data/*.db-*
+ai-usage-dashboard
+server
+.env
+.DS_Store

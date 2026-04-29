@@ -1,0 +1,20 @@
+services:
+  ai-usage-dashboard:
+    build: .
+    container_name: ai-usage-dashboard
+    restart: unless-stopped
+    user: "${AI_USAGE_UID:-501}:${AI_USAGE_GID:-20}"
+    ports:
+      - "${AI_USAGE_PORT:-8090}:8080"
+    environment:
+      AI_USAGE_CONFIG: /app/config.json
+      AI_USAGE_DB: /data/usage.db
+      AI_USAGE_STATIC_DIR: /app/web/static
+    volumes:
+      - ./data:/data
+      - ./config.example.json:/app/config.json:ro
+      - ${HOME}/.codex:/host/.codex:ro
+      - ${HOME}/.claude:/host/.claude:ro
+      - ${HOME}/.godclaude:/host/.godclaude:ro
+      - ${HOME}/Library/Application Support/Claude:/host/Library/Application Support/Claude:ro
+      - ${HOME}/Library/Application Support/Antigravity:/host/Library/Application Support/Antigravity:ro

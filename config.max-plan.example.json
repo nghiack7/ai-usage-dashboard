@@ -1,0 +1,67 @@
+{
+  "server": {
+    "addr": ":8080"
+  },
+  "scan": {
+    "interval_seconds": 300
+  },
+  "tools": [
+    {
+      "name": "codex",
+      "display_name": "Codex",
+      "enabled": true,
+      "monthly_cost_usd": 200,
+      "monthly_quota_tokens": 0,
+      "parser": "generic-jsonl",
+      "log_paths": [
+        "~/.codex/sessions/**/*.jsonl",
+        "~/.codex/archived_sessions/*.jsonl",
+        "~/.codex/log/*.log",
+        "/host/.codex/sessions/**/*.jsonl",
+        "/host/.codex/archived_sessions/*.jsonl",
+        "/host/.codex/log/*.log"
+      ]
+    },
+    {
+      "name": "claude",
+      "display_name": "Claude Code",
+      "enabled": true,
+      "monthly_cost_usd": 200,
+      "monthly_quota_tokens": 0,
+      "parser": "generic-jsonl",
+      "log_paths": [
+        "~/.claude/projects/**/*.jsonl",
+        "~/Library/Application Support/Claude/claude-code-sessions/**/*.jsonl",
+        "/host/.claude/projects/**/*.jsonl",
+        "/host/Library/Application Support/Claude/claude-code-sessions/**/*.jsonl"
+      ]
+    },
+    {
+      "name": "antigravity",
+      "display_name": "Antigravity",
+      "enabled": true,
+      "monthly_cost_usd": 200,
+      "monthly_quota_tokens": 0,
+      "parser": "generic-text",
+      "log_paths": [
+        "~/Library/Application Support/Antigravity/logs/**/*.log",
+        "/host/Library/Application Support/Antigravity/logs/**/*.log"
+      ]
+    },
+    {
+      "name": "godclaude",
+      "display_name": "GodClaude",
+      "enabled": true,
+      "monthly_cost_usd": 200,
+      "monthly_quota_tokens": 0,
+      "parser": "generic-jsonl",
+      "log_paths": [
+        "~/.godclaude/**/*.jsonl",
+        "~/.godclaude/**/*.log",
+        "/host/.godclaude/**/*.jsonl",
+        "/host/.godclaude/**/*.log"
+      ]
+    }
+  ]
+}
+

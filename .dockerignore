@@ -1,0 +1,10 @@
+.git
+.gitignore
+data
+*.db
+*.db-*
+.DS_Store
+tmp
+dist
+node_modules
+
