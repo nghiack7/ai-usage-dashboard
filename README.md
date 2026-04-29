@@ -14,6 +14,8 @@ The app runs a Go web service, stores parsed usage events in SQLite, and serves 
 
 Token counts are provider/tool-reported context usage. For agent CLIs, a short user prompt can still produce high input tokens because the request may include system instructions, repository instructions, conversation history, tool outputs, file snippets, and cached context.
 
+See [SUPPORTED.md](SUPPORTED.md) for the tool/model support matrix. The dashboard is model-agnostic: it records any model name emitted by a supported log source.
+
 ## Run Locally
 
 ```bash
